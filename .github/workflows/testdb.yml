@@ -30,7 +30,8 @@ on:
         options:
         - postgresql
         - mysql
-
+permissions:
+  contents: write
 env:
   FLYWAY_VERSION: 9.16.3
   DB_NAME: test

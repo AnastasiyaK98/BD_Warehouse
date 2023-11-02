@@ -1,0 +1,14 @@
+Flyway Community Edition 9.16.3 by Redgate
+See release notes here: https://rd.gt/416ObMi
+
+Database: jdbc:postgresql://localhost:5432/test (PostgreSQL 16.0)
+WARNING: Flyway upgrade recommended: PostgreSQL 16.0 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+Schema version: << Empty Schema >>
+
++----------+---------+------------------------------+--------+---------------------+---------+----------+
+| Category | Version | Description                  | Type   | Installed On        | State   | Undoable |
++----------+---------+------------------------------+--------+---------------------+---------+----------+
+|          |         | << Flyway Schema Creation >> | SCHEMA | 2023-11-02 18:16:46 | Success |          |
++----------+---------+------------------------------+--------+---------------------+---------+----------+
+
+WARNING: A Flyway License was not provided; fell back to Community Edition. Please contact sales at sales@flywaydb.org for license information.

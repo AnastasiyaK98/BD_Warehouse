@@ -1,0 +1,18 @@
+name: Build and Test
+
+on: workflow_dispatch
+
+jobs:
+  runchecks:
+    name: "Run Liquibase Quality Checks"
+    runs-on: ubuntu-latest  
+    steps:
+      - uses: actions/checkout@v2
+      - uses: liquibase/liquibase-github-action@v7
+        with:
+          operation: 'update'
+          classpath: 'example/changelogs'
+          changeLogFile: 'samplechangelog.h2.sql'
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          url: ${{ secrets.URL }}

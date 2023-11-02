@@ -70,8 +70,8 @@ jobs:
     - name: Run Flyway Migrations
       env:
         FLYWAY_URL: jdbc:${{ inputs.dbType }}://${{ inputs.dbHost }}:${{ inputs.dbPort }}/${{ env.DB_NAME }}
-        FLYWAY_USER:  ${{ secrets.DB_USER }}
-        FLYWAY_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        FLYWAY_USER:  ${{ secrets.USERNAME}}
+        FLYWAY_PASSWORD: ${{ secrets.PASSWORD}}
         FLYWAY_SCHEMAS: flyway,public
       run: |
         flyway migrate
@@ -79,8 +79,8 @@ jobs:
     - name: Flyway info and write result to file
       env:
         FLYWAY_URL: jdbc:${{ inputs.dbType }}://${{ inputs.dbHost }}:${{ inputs.dbPort }}/${{ env.DB_NAME }}
-        FLYWAY_USER: ${{ secrets.USER }} 
-        FLYWAY_PASSWORD: ${{ secrets.PASSWORD }}
+        FLYWAY_USER: ${{ secrets.USERNAME}} 
+        FLYWAY_PASSWORD: ${{ secrets.PASSWORD}}
         FLYWAY_SCHEMAS: flyway,public
       run: |
         flyway info > ./migration-status/$(date -u +"%Y-%m-%d|%H:%M:%S")-${{ inputs.env }}.txt

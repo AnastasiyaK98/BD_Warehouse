@@ -22,5 +22,5 @@ jobs:
           flyway/flyway:7.12.1-alpine
           -url="jdbc:postgresql://${{ env.SUPABASE_HOST }}:${{ env.SUPABASE_PORT }}/${{ env.SUPABASE_DB }}"
           -user="${{ env.SUPABASE_USER }}"
-          -password=Kirilova%618249
+          -password="Kirilova%618249"
           migrate

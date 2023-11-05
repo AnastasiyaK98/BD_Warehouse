@@ -10,7 +10,7 @@ jobs:
     name: Run Flyway migrations
     runs-on: ubuntu-20.04
     env:
-      SUPABASE_HOST: localhost
+      SUPABASE_HOST: host.docker.internal
       SUPABASE_PORT: 5432
       SUPABASE_USER: postgres
       SUPABASE_DB: test
